@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 import Login from './src/screens/authentication/Login';
 import GettingStarted from './src/screens/GettingStarted'
-import SignUpform from './src/screens/authentication/CustomerSignUpForm'
+import SignUpform from './src/screens/authentication/SignUpForm'
 import SignInWithGoogle from './src/components/SignInWithGoogle';
 import ForgotPassword from './src/screens/authentication/ForgotPassword';
 import OTPVerification from './src/screens/authentication/OTPVerification';
