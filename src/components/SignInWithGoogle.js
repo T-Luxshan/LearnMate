@@ -14,7 +14,7 @@ const SignInWithGoogle = (props) => {
         // If the text is signup, it should redirect to "ChooseRole" screen.
         if(props.signState === "Sign up")
           {
-          navigation.navigate('SignUpForm')
+          navigation.navigate('SignUpform')
         // If the text is Login, it should redirect to "Login" screen.
         }else 
         {

@@ -32,7 +32,7 @@ const SignUpForm = () => {
   const [rightIcon, setRightIcon] = useState("eye-slash"); // Toggle eye icon.
   const [errors, setErrors] = useState({});
   const [regError, setRegError] = useState();
-  const [mState, setMState] = useState(false);
+  const [mState, setMState] = useState(true);
 
   const schema = yup.object().shape({
     name: yup
@@ -125,7 +125,7 @@ const SignUpForm = () => {
     }
   };
   return (
-    <View style={ [styles.registerContainer,  mState && { backgroundColor: 'rgba(0, 0, 0, 0.5)' }]}>
+    <View style={ [styles.registerContainer, ]}>
       <SignupHead userRole="customer" />
       <KeyboardAvoidingView
         style={[styles.container]}
@@ -235,7 +235,7 @@ const SignUpForm = () => {
             <View></View>
             <Button
               mode="contained"
-              buttonColor={ mState ? 'rgba(0, 0, 0, 0.1)' : "#FB9741"}
+              buttonColor={ "#FB9741"}
               textColor={ mState ? 'rgba(0, 0, 0, 0.5)' : 'white'}
               onPress={handleSignUp}
               style={styles.button}
