@@ -29,7 +29,7 @@ const LabourSignUpForm = () => {
   const [errors, setErrors] = useState({});
   const [regError, setRegError] = useState();
   const [fileURI, setFileURI] = useState(null);
-  const [jobRoles, setJobRoles] = useState([]);
+  // const [jobRoles, setJobRoles] = useState([]);
   const [mState, setMState] = useState(false);
 
   // useEffect(() => {
