@@ -122,12 +122,12 @@ const LabourSignUpForm = () => {
           // Store the tokens in localStorage or secure cookie for later use
           // localStorage.setItem('token', response.data.accessToken);
           // localStorage.setItem('refreshToken', response.data.refreshToken);
-          AsyncStorage.setItem("token", response.data.accessToken);
-          AsyncStorage.setItem("refreshToken", response.data.refreshToken);
+          // AsyncStorage.setItem("token", response.data.accessToken);
+          // AsyncStorage.setItem("refreshToken", response.data.refreshToken);
        
        
           //  Navigate to the next page to the sign up.
-          navigation.navigate('WaitingPage')
+         
 
 
         } catch (e) {
