@@ -62,12 +62,12 @@ const ChangePassword = () => {
       await schema.validate({ password, confirmPassword }, { abortEarly: false });
       setErrors({});
 
-      changePassword(role, email, password, confirmPassword)
-        .then(response =>{
-          console.log(response);
+      // changePassword(role, email, password, confirmPassword)
+      //   .then(response =>{
+      //     console.log(response);
           setDialogVisible(true);
           setMState(true);
-        })
+        // })
       // setDialogVisible(true);
       // setMState(true);
     } catch (error) {

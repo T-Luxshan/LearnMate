@@ -96,45 +96,45 @@ const HomePage = () => {
       },
     ];
 
-    setData(dummyData);
+    // setData(dummyData);
   // }, []);
 
-    // const fetchData = async () => {
-    //   const options = {
-    //     method: "GET",
-    //     url: "https://searchbookpdf.p.rapidapi.com/search/publisher",
-    //     params: { q: "MCGraw-Hill Education" },
-    //     headers: {
-    //       "x-rapidapi-key": "e07112fef8mshe887997e1436221p17f995jsn7d163e88f209",
-    //       "x-rapidapi-host": "searchbookpdf.p.rapidapi.com",
-    //     },
-    //   };
+    const fetchData = async () => {
+      const options = {
+        method: "GET",
+        url: "https://searchbookpdf.p.rapidapi.com/search/publisher",
+        params: { q: "MCGraw-Hill Education" },
+        headers: {
+          'x-rapidapi-key': 'cf01554596mshf17a3bc5ae9e8d6p10060fjsn858242f79812',
+          'x-rapidapi-host': 'searchbookpdf.p.rapidapi.com'
+        },
+      };
 
-    //   try {
-    //     const response = await axios.request(options);
-    //     if (response.data && Array.isArray(response.data.result)) {
-    //       const formattedData = response.data.result.map((item) => ({
-    //         ID: item.ID,
-    //         Author: item.Author || "Unknown",
-    //         Title: item.Title || "Untitled",
-    //         Publisher: item.Publisher || "Unknown Publisher",
-    //         Year: item.Year || "N/A",
-    //         Pages: item.Pages || "N/A",
-    //         Language: item.Language || "Unknown",
-    //         Size: item.Size || "N/A",
-    //         Extension: item.Extension || "Unknown",
-    //         encrypted_url: item.encrypted_url || "",
-    //       }));
-    //       setData(formattedData);
-    //     } else {
-    //       setData([]);
-    //     }
-    //   } catch (error) {
-    //     console.error("Error fetching data:", error);
-    //   }
-    // };
+      try {
+        const response = await axios.request(options);
+        if (response.data && Array.isArray(response.data.result)) {
+          const formattedData = response.data.result.map((item) => ({
+            ID: item.ID,
+            Author: item.Author || "Unknown",
+            Title: item.Title || "Untitled",
+            Publisher: item.Publisher || "Unknown Publisher",
+            Year: item.Year || "N/A",
+            Pages: item.Pages || "N/A",
+            Language: item.Language || "Unknown",
+            Size: item.Size || "N/A",
+            Extension: item.Extension || "Unknown",
+            encrypted_url: item.encrypted_url || "",
+          }));
+          setData(formattedData);
+        } else {
+          setData([]);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    // fetchData();
+    fetchData();
   }, []);
 
   const handleItemClick = () => {
